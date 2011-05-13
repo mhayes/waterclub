@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  invoice_date: 2011-05-13
+  amount: 1.5
+
+two:
+  invoice_date: 2011-05-13
+  amount: 1.5

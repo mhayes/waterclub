@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Invoice date:</b>
+  <%= @invoice.invoice_date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @invoice.amount %>
+</p>
+
+<h3>Members</h3>
+<ul>
+    <% @invoice.members.each do |m| %>
+        <li><%= m.name %></li>
+    <% end %>
+</ul>
+
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>
