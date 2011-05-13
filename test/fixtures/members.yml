@@ -1,9 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  email: MyString
+  name: Bob Loblaw
+  email: bob@loblaw.com
+  active: false
 
 two:
-  name: MyString
-  email: MyString
+  name: Mark Hayes
+  email: mark@deployfx.com
+  active: false
