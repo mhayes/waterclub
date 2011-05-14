@@ -1,3 +1,4 @@
 class Member < ActiveRecord::Base
-    has_and_belongs_to_many :invoices
+    has_many :participations
+    has_many :invoices, :through => :participations
 end

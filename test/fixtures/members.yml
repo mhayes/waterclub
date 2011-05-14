@@ -1,5 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
+captainplanet:
+  name: Captain Planet
+  email: captainplanet@earthwindfireheart.org
+  active: true
+  
 one:
   name: Bob Loblaw
   email: bob@loblaw.com

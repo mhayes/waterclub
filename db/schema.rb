@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110513173749) do
+ActiveRecord::Schema.define(:version => 20110514171606) do
 
   create_table "invoices", :force => true do |t|
     t.date     "invoice_date", :null => false
@@ -19,13 +19,6 @@ ActiveRecord::Schema.define(:version => 20110513173749) do
     t.datetime "updated_at"
   end
 
-  create_table "invoices_members", :id => false, :force => true do |t|
-    t.integer "member_id",  :null => false
-    t.integer "invoice_id", :null => false
-  end
-
-  add_index "invoices_members", ["member_id", "invoice_id"], :name => "index_invoices_members_on_member_id_and_invoice_id", :unique => true
-
   create_table "members", :force => true do |t|
     t.string   "name",                         :null => false
     t.string   "email",                        :null => false
@@ -33,5 +26,14 @@ ActiveRecord::Schema.define(:version => 20110513173749) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "participations", :force => true do |t|
+    t.integer  "member_id"
+    t.integer  "invoice_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "participations", ["member_id", "invoice_id"], :name => "index_participations_on_member_id_and_invoice_id", :unique => true
 
 end
