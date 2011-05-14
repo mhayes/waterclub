@@ -1,9 +1,6 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  invoice_date: 2011-04-13
-  amount: 50.75
-
-two:
-  invoice_date: 2011-05-14
-  amount: 34.50
+<% 100.times do |i| %>
+<%= "invoice#{i}:" %>
+  invoice_date: <%= i.days.ago %>
+  amount: <%= i+2*7 %>
+<% end %>

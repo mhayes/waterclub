@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MembersControllerTest < ActionController::TestCase
   setup do
-    @member = members(:one)
+    @member = members(:member1)
   end
 
   test "should get index" do
@@ -39,8 +39,8 @@ class MembersControllerTest < ActionController::TestCase
     assert_redirected_to member_path(assigns(:member))
   end
 
-  test "should destroy member" do
-    assert_difference('Member.count', -1) do
+  test "should deactivate member" do
+    assert_difference('Member.count', 0) do
       delete :destroy, :id => @member.to_param
     end
 

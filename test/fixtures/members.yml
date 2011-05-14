@@ -1,15 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-captainplanet:
-  name: Captain Planet
-  email: captainplanet@earthwindfireheart.org
-  active: true
-  
-one:
-  name: Bob Loblaw
-  email: bob@loblaw.com
-  active: false
-
-two:
-  name: Mark Hayes
-  email: mark@deployfx.com
-  active: false
+<% 100.times do |i| %>
+<%= "member#{i}:" %>
+  name: <%= "Member #{i}" %>
+  email: <%= "member#{i}@gmail.com" %>
+  active: <%= [true,false].at(i%2) %>
+<% end %>
